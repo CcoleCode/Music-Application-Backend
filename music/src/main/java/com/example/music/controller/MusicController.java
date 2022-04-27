@@ -54,7 +54,7 @@ public class MusicController {
         }
         
        /* @PatchMapping("/tracks/{trackId}/{trackName}")
-        public Music updateTracks(@PathVariable(value = "trackId", "trackName") Long id, String trackName @RequestBody Music trackName) {
+        public Music updateTracks(@PathVariable(value = "trackId", "trackName", method = RequestMethod.PATCH) Long id, String trackName @RequestBody Music trackName) {
             return trackService.updateMusic(id, trackName);
         }*/
 }

@@ -39,4 +39,12 @@ public Music updateMusic(Long trackId, Music trackDetails) {
      return trackRepository.save(track);                                
 }
 
+//UPDATE
+public Music updateTrackName(Long trackId, String trackName) {
+	Music track = trackRepository.findById(trackId).get();
+	track.setTrackName(trackName);
+	
+	return trackRepository.save(track);
+}
+
 }
